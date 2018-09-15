@@ -1,9 +1,12 @@
-<br />
+
+<div class="main-text">
   <h1>Add a new File</h1>
   <%= simple_form_for @uploadfile, url: uploadfiles_path do |f| %>
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :size %>
+    <br />
+    <%= f.input :video, label: 'File (Images, Text, Video, Music...)' %>    
     <br />
     <%= f.submit "Create", class: 'btn btn-primary' %>
     <br />
