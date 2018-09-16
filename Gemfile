@@ -58,6 +58,7 @@ gem 'devise'
 gem 'carrierwave', '~> 1.0'
 gem 'figaro'
 gem 'carrierwave-aws'
+gem 'dropzonejs-rails'
 gem 'rails_12factor', group: :production
 gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'

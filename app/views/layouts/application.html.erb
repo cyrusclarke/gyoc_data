@@ -29,7 +29,11 @@
 	        <a class="nav-link" href="#">Data Calculator</a>
 	      </li>
         <li class="nav-item">
-          <%= link_to 'Upload File',new_uploadfile_path,{:style=>'color:grey; line-height:40px; text-decoration:none', :class => "css_class"}%> 
+          <%= link_to 'Upload File',new_uploadfile_path, data: { turbolinks: false } %> 
+        
+<!-- , {:style=>'color:grey; line-height:40px; text-decoration:none', :class => "css_class"} -->
+
+
         </li>
 	    </ul>
 <!-- User Sign-In -->

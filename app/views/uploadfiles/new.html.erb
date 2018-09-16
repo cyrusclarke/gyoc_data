@@ -1,6 +1,18 @@
+<!-- dropbox test-->
 
-  <%= simple_form_for @uploadfile, url: uploadfiles_path do |f| %>
-    <div class="main-text">
+    <%= form_for @uploadfile, html: {multipart: true, class:"dropzone",id:'my-dropzone'}, url: uploadfiles_path do |f| %>
+    <div id="upload">
+        <div class='dz-message needsclick'>
+            <h3> drop file here </h3> or <strong>click to upload</strong>
+        </div>
+        <div class="fallback">
+            <%= f.file_field :video %>    
+        </div>
+    </div>
+    <% end %>
+
+<%= simple_form_for @uploadfile, html: {multipart: true, class:"dropzone",id:'my-dropzone'}, url: uploadfiles_path do |f| %>
+<div class="main-text">
     <h1>Add a new File</h1>
     <%= f.input :title %>
     <%= f.input :description %>
@@ -8,7 +20,14 @@
     <br />
     <%= f.input :video, label: 'File (Images, Text, Video, Music...)' %>    
     <br />
-    <%= f.submit "Create", class: 'btn btn-primary' %>
     <br />
-    </div>
-  <% end %>
+    <div class='dz-message needsclick'>
+        <h3> drop file here </h3> or <strong>click to upload</strong>
+        </div>
+        <div class="fallback">
+        <%= f.file_field :video %>    
+        </div>
+    <%= f.submit "Create", class: 'btn btn-primary' %>
+</div>
+<% end %>
+
