@@ -16,6 +16,6 @@ class UploadfilesController < ApplicationController
 	private
 
 	def uploadfile_params
-	    params.require(:uploadfile).permit(:title, :subtitle, :video)
+	    params.require(:uploadfile).permit(:title, :description, :size, :video)
 	end
 end

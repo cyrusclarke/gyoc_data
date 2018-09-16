@@ -1,11 +1,13 @@
-<h1> Your Upload </h1>  	
-  	<p class="text-center">User: <b><%= @uploadfile.user.email %></b></p>
-	<br />
-  	<p class="text-center">File Name: <b><%= @uploadfile.title %></b></p>
-	<br />
-  	<p class="text-center">Description: <b><%= @uploadfile.description %></b></p>
-	<br />
-	<p class="text-center">Upload Size: <b><%= @uploadfile.size %></b></p>
-	<br />
-	<p class="text-center"><%= link_to 'file', @uploadfile.video.to_s %>
-
+<div class="main-text, text-center">
+	<h1> Your Upload </h1>
+	</br> 	
+	  	<p> User: <b><%= @uploadfile.user.email %></b></p>
+		<br />
+	  	<p>File Name: <b><%= @uploadfile.title %></b></p>
+		<br />
+	  	<p>Description: <b><%= @uploadfile.description %></b></p>
+		<br />
+		<p>Upload Size: <b><%= @uploadfile.size %></b></p>
+		<br />
+		<p>Your Upload: <b><%= link_to 'File', @uploadfile.video.to_s %></p>
+</div>
