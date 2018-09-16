@@ -1,7 +1,7 @@
 
-<div class="main-text">
-  <h1>Add a new File</h1>
   <%= simple_form_for @uploadfile, url: uploadfiles_path do |f| %>
+    <div class="main-text">
+    <h1>Add a new File</h1>
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :size %>
@@ -10,6 +10,5 @@
     <br />
     <%= f.submit "Create", class: 'btn btn-primary' %>
     <br />
+    </div>
   <% end %>
-  <br />
-</div>
