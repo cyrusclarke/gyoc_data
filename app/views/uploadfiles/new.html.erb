@@ -6,9 +6,19 @@
             <h3> drop file here </h3> or <strong>click to upload</strong>
         </div>
         <div class="fallback">
-            <%= f.file_field :video %>    
+            <%= f.file_field 'video' %>    
         </div>
     </div>
+        <%= simple_form_for @uploadfile, url: uploadfiles_path do |f| %>
+        <div class="main-text">
+        <h1>Add a new File</h1>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :size %>
+        <br />
+        <%= f.submit "Create", class: 'btn btn-primary' %>
+        <% end %>
+        </div>
     <% end %>
 
 <%= simple_form_for @uploadfile, html: {multipart: true, class:"dropzone",id:'my-dropzone'}, url: uploadfiles_path do |f| %>
