@@ -1,43 +1,22 @@
 <!-- dropbox test-->
 
-    <%= form_for @uploadfile, html: {multipart: true, class:"dropzone",id:'my-dropzone'}, url: uploadfiles_path do |f| %>
-    <div id="upload">
-        <div class='dz-message needsclick'>
-            <h3> drop file here </h3> or <strong>click to upload</strong>
-        </div>
-        <div class="fallback">
-            <%= f.file_field 'video' %>    
-        </div>
-    </div>
-        <%= simple_form_for @uploadfile, url: uploadfiles_path do |f| %>
-        <div class="main-text">
-        <h1>Add a new File</h1>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :size %>
-        <br />
-        <%= f.submit "Create", class: 'btn btn-primary' %>
-        <% end %>
-        </div>
-    <% end %>
-
-<%= simple_form_for @uploadfile, html: {multipart: true, class:"dropzone",id:'my-dropzone'}, url: uploadfiles_path do |f| %>
+<%= simple_form_for @uploadfile, url: uploadfiles_path do |f| %>
 <div class="main-text">
-    <h1>Add a new File</h1>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :size %>
+    <h1>Upload your data to our Cloud</h1>
+    </br>
+    <p><b>Step 1:</b></p><p>Please take a moment to reflect about what you would like to upload.<p style="font-size:80%"> (Remember this data will be stored in a plant)</p>
+    </p></br>
+    <p><b>Step 2:</b></p><p>Carefully choose your data:</p><p <p style="font-size:80%">Please upload ONE file only, as we will begin sequencing your data in the next step. We accept nearly all file types. </i></p>
+    <%= f.input :video, label: false %>    
+    </br>
+    <p><b>Step 3:</b></p><p>Give your data a meaningful name.</p><p <p style="font-size:80%"></i></p>    
+    <%= f.input :title, label: false %>
+    </br>
+    <p><b>Step 4:</b></p><p>Tell us the story behind this data and why you're uploading it.</p><p <p style="font-size:80%"></i></p>
+    <%= f.input :description, label: false %>
     <br />
-    <%= f.input :video, label: 'File (Images, Text, Video, Music...)' %>    
-    <br />
-    <br />
-    <div class='dz-message needsclick'>
-        <h3> drop file here </h3> or <strong>click to upload</strong>
-        </div>
-        <div class="fallback">
-        <%= f.file_field :video %>    
-        </div>
-    <%= f.submit "Create", class: 'btn btn-primary' %>
+    <p> Now take a deep breath. And when you're ready, upload your data to the cloud.</p>
+    <%= f.submit "Upload",  class: 'btn btn-primary' %>
 </div>
 <% end %>
 

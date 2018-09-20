@@ -1,0 +1,14 @@
+<div class="main-text, text-center">
+<h1> Growing My Own Cloud </h1>
+ 	<div class="data-display">
+ 	<% @user.uploadfiles.each do |uploadfile| %>
+ 		<p><b>Link to file:</b> <%=uploadfile.video.to_s%>
+ 		<p><b>File Name:</b> <%=uploadfile.title%>
+		<p><b>File Description:</b> <%=uploadfile.description%>	
+ 		</br></br>
+ 	<% end %>
+ 	</div>
+</div>
+
+
+
