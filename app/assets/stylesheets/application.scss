@@ -14,3 +14,13 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+    font-family: "Akkurat-Pro-Regular";
+    src:font-url("lineto-akkurat-pro-regular.eot");
+    src:font-url("lineto-akkurat-pro-regular.eot?#iefix") format("embedded-opentype"),
+        font-url("lineto-akkurat-pro-regular.woff2") format("woff2"),
+        font-url("lineto-akkurat-pro-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
