@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grow Your Own Cloud</title>
@@ -11,6 +12,7 @@
   </head>
 
   <body>
+      <div class="bg"></div>
 <!-- Flex Container	for main body-->
     <div id="flex-content-container">
 <!-- Top Navigation	-->
@@ -21,19 +23,17 @@
 	  <a class="navbar-brand">
     <%= link_to 'GYOC', root_path,{:style=>'color:black; font-size:20px; text-decoration:none;font-weight:bold;',:class=>'css_class'}%>
     </a>
-<!-- 	  	    <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">-->
 	  </a>
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-auto">
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Data Calculator</a>
+	        <a class="nav-link" href="#"> </a>
 	      </li>
         <li class="nav-item">
-          <%= link_to 'Upload File',new_uploadfile_path, data: { turbolinks: false }, :style=>'color:grey; line-height:40px; text-decoration:none', :class => "css_class" %> 
+<!--         link to upload (hidden) -->
+          <%= link_to '',new_uploadfile_path, data: { turbolinks: false }, :style=>'color:grey; line-height:40px; text-decoration:none', :class => "css_class" %> 
         
 <!-- , {:style=>'color:grey; line-height:40px; text-decoration:none', :class => "css_class"} -->
-
-
         </li>
 	    </ul>
 <!-- User Sign-In -->
@@ -47,10 +47,10 @@
         	</li>
      		 <% else %>
        		 <li class="nav-item">
-       		 <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>
+       		 <%= link_to '', new_user_session_path, class: 'nav-link' %>
        		 </li>
        		 <li>
-       		 <%= link_to 'Create Account', new_user_registration_path, class: 'nav-link' %>
+       		 <%= link_to '', new_user_registration_path, class: 'nav-link' %>
         	</li>
       		<% end %>
     	</ul>
@@ -67,14 +67,15 @@
 
     <%= yield %>	
 	</div>
-    
-    <div id="footer">
+
+<!-- Footer -->
+   <!--  <div id="footer">
       <div class="container">
         <b>How we handle your data</b>
         <br />
         <%= link_to 'Link', '#' %>
       </div>
-    </div>
-
+    </div> -->
+  </div>
   </body>
 </html>
